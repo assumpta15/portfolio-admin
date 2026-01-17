@@ -28,12 +28,9 @@ export default function App() {
         <Toaster position="top-right" />
 
         <Routes>
-          {/* PUBLIC */}
+          
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/projects" element={<PublicProjects />} />
-          <Route path="/projects/:id" element={<ProjectDetails />} /> */}
-
-          {/* ADMIN / PRIVATE */}
+          
           <Route
             element={
               <PrivateRoute>
