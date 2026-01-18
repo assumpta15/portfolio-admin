@@ -29,7 +29,7 @@ export default function EditProject() {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const res = await api.get(`/projects/${id}`);
+        const res = await api.get(`/api/projects/${id}`);
         const project = res.data.data;
 
         setFormData({

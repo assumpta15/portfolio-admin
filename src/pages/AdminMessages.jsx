@@ -9,7 +9,7 @@ export default function AdminMessages() {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const res = await api.get("/admin/messages");
+        const res = await api.get("/api/admin/messages");
         setMessages(res.data);
       } catch (err) {
         console.error("Failed to load messages", err);
@@ -31,7 +31,7 @@ export default function AdminMessages() {
     if (!replyText) return;
 
     try {
-      await api.post(`/admin/messages/${id}/reply`, { replyText });
+      await api.post(`/api/admin/messages/${id}/reply`, { replyText });
 
       setMessages((prev) =>
         prev.map((m) =>

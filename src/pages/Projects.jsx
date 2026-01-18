@@ -11,7 +11,7 @@ export default function Projects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await api.get("/projects");
+        const res = await api.get("/api/projects");
         setProjects(res.data.data || []);
       } catch (error) {
         console.error(error);

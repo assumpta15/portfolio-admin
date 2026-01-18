@@ -37,7 +37,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchDashboardStats = async () => {
       try {
-        const res = await api.get("/projects");
+        const res = await api.get("/api/projects");
         const projects = res.data.data || [];
 
         setTotalProjects(projects.length);

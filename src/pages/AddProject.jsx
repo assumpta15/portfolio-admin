@@ -349,7 +349,7 @@ export default function AddProject() {
     featured: false,
   });
 
-  const [imageFile, setImageFile] = useState(null); // ✅ correct
+  const [imageFile, setImageFile] = useState(null); 
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -385,7 +385,7 @@ export default function AddProject() {
         data.append("image", imageFile);
       }
 
-      await api.post("/projects", data, {
+      await api.post("/api/projects", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
