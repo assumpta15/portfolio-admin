@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import api from "../utils/api"; // ✅ FIXED PATH
+import api from "../utils/api"; 
 
 export default function AdminMessages() {
   const [messages, setMessages] = useState([]);
